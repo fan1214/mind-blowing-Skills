@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>样式预览 · career-learning-exam SaaS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <main>
+
+    <header class="hero">
+      <p class="meta"><span class="badge">样式预览</span> SaaS 文档风 · Vercel 蓝</p>
+      <h1>PHP 后端开发</h1>
+      <p class="hero-desc">从零到能独立完成后端 CRUD 与部署</p>
+      <div class="stats">
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">模块</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">核心</span></div>
+        <div class="stat"><span class="stat-num">60h</span><span class="stat-label">预计学时</span></div>
+      </div>
+    </header>
+
+    <h2>能力目标</h2>
+    <ul>
+      <li>用 PHP 编写面向对象的 Web 应用</li>
+      <li>使用 PDO 安全操作 MySQL 数据库</li>
+      <li>理解 REST API 设计与 HTTP 基础</li>
+    </ul>
+
+    <h2>学习模块</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>模块</th><th>学完应能做什么</th><th>预计学时</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M1 PHP 基础</td>
+            <td>写变量、流程控制与函数</td>
+            <td>8h</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>M2 面向对象</td>
+            <td>定义类、接口与命名空间</td>
+            <td>10h</td>
+            <td><span class="badge core">核心</span></td>
+          </tr>
+          <tr>
+            <td>M3 Web 与 HTTP</td>
+            <td>理解请求/响应、Session、REST</td>
+            <td>8h</td>
+            <td><span class="badge core">核心</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="module-outline" id="m2">
+      <div class="module-header">
+        <span class="module-id">M2</span>
+        <h3>面向对象 <span class="badge core">核心</span></h3>
+      </div>
+      <p class="outline-meta">预计 10 小时 · 前置：M1</p>
+      <ul>
+        <li>能定义类、属性、方法与访问修饰符</li>
+        <li>能使用继承、接口与 trait 组织代码</li>
+        <li>能配置 PSR-4 自动加载</li>
+      </ul>
+      <ul class="link-preview">
+        <li><span class="badge res-official">官方</span>
+          <a href="https://www.php.net/manual/zh/language.oop5.php" target="_blank" rel="noopener">PHP OOP 手册</a>
+          — 类与对象权威参考</li>
+        <li><span class="badge res-read">阅读</span>
+          <a href="https://phptherightway.com/" target="_blank" rel="noopener">PHP The Right Way</a>
+          — OOP 与最佳实践</li>
+        <li><span class="badge res-lab">练习</span>
+          <a href="https://exercism.org/tracks/php" target="_blank" rel="noopener">Exercism PHP Track</a>
+          — 小型 OOP 练习题</li>
+      </ul>
+      <p class="module-link"><a href="#">查看完整模块 →</a></p>
+    </section>
+
+    <h2>推荐学习资源</h2>
+    <div class="table-wrap">
+      <table class="resource-table">
+        <thead>
+          <tr><th>类型</th><th>名称</th><th>说明</th><th>链接</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge res-official">官方</span></td>
+            <td>PHP 类与对象</td>
+            <td>语法、继承、抽象类、接口</td>
+            <td><a href="https://www.php.net/manual/zh/language.oop5.php" target="_blank" rel="noopener">打开</a></td>
+          </tr>
+          <tr>
+            <td><span class="badge res-doc">文档</span></td>
+            <td>PSR-4 自动加载</td>
+            <td>命名空间与 Composer autoload</td>
+            <td><a href="https://www.php-fig.org/psr/psr-4/" target="_blank" rel="noopener">打开</a></td>
+          </tr>
+          <tr>
+            <td><span class="badge res-video">视频</span></td>
+            <td>freeCodeCamp PHP OOP</td>
+            <td>英文视频，约 2h，适合跟练</td>
+            <td><a href="https://www.youtube.com/watch?v=OK_JCtrrv-c" target="_blank" rel="noopener">打开</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>建议学习顺序</h2>
+    <ol class="learning-path">
+      <li>阅读 PHP 官方 OOP 章节「类的基础」与「继承」</li>
+      <li>跟做 freeCodeCamp 视频中 User/Admin 类示例</li>
+      <li>阅读 PSR-4，用 Composer 创建带命名空间的小项目</li>
+      <li>在 Exercism 完成 2 道 OOP 题</li>
+    </ol>
+
+    <div class="card">
+      <h3>常见误区</h3>
+      <p>把 PHP 4 时代的 <code>var</code> 与 PHP 7+ 的 typed properties 混用；忽略 <code>declare(strict_types=1)</code> 对方法签名的影响。</p>
+    </div>
+
+    <h2>结业考试 · 样题</h2>
+
+    <div class="question">
+      <div class="question-header">
+        <span>Q1</span>
+        <span class="badge">选择</span>
+        <span>M2 · 基础 · 4 分</span>
+      </div>
+      <div class="question-body">
+        <p>PHP 中，下列哪个关键字用于实现接口？</p>
+        <ul class="options">
+          <li>A. extends</li>
+          <li>B. implements</li>
+          <li>C. trait</li>
+          <li>D. abstract</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-header">
+        <span>Q2</span>
+        <span class="badge">简答</span>
+        <span>M2 · 中等 · 8 分</span>
+      </div>
+      <div class="question-body">
+        <p>简述 PSR-4 自动加载的命名空间与目录结构的对应关系。</p>
+        <textarea class="answer-area" placeholder="在此作答…"></textarea>
+      </div>
+    </div>
+
+    <h2>成绩报告 · 样例</h2>
+
+    <div class="score-hero">
+      <span class="score-value">84</span>
+      <span class="score-total">/ 100</span>
+      <span class="badge pass">通过</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>模块</th><th>得分</th><th>进度</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>M2 面向对象</td>
+            <td>18 / 20</td>
+            <td><div class="score-bar"><div class="score-bar-fill pass" style="width:90%"></div></div></td>
+          </tr>
+          <tr>
+            <td>M3 Web 与 HTTP</td>
+            <td>14 / 20</td>
+            <td><div class="score-bar"><div class="score-bar-fill pass" style="width:70%"></div></div></td>
+          </tr>
+          <tr>
+            <td>M4 数据库</td>
+            <td>10 / 20</td>
+            <td><div class="score-bar"><div class="score-bar-fill fail" style="width:50%"></div></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">本预览页仅用于展示 SaaS 样式组件，非真实学习内容。正式学习路径由 Agent 在 PLAN 阶段生成。</p>
+
+    <nav class="footer-nav">
+      <a href="#">← 返回学习路径</a>
+    </nav>
+
+  </main>
+</body>
+</html>

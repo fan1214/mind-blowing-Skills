@@ -24,7 +24,7 @@
 
 **Agent**：
 - 创建 workspace，复制 `style.css`
-- 生成 `index.html`（6 模块总览 + 每模块 `.module-outline` 含 3 条精选链接）
+- 生成 `index.html`（`.hero` + `.stats` + 6 模块总览 + 每模块 `.module-outline` 含 3 条精选链接）
 - **为 M1–M6 各生成** `modules/m{x}-*.html`（知识点明细 + 完整资源表）
 - 用 WebSearch 核实链接有效性
 - 写 `state.json`（phase: PLAN, modules_generated: true）
@@ -53,35 +53,51 @@
 
 **Agent**：
 - 按 rubric 评分
-- 生成 `results/result-2026-09-10-001.html`（模块条形图、逐题解析、未通过补考说明）
+- 生成 `results/result-2026-09-10-001.html`（`.score-hero`、模块条形图、逐题解析、未通过补考说明）
 - 更新 state（phase: GRADE）
 
 ## index.html 片段示例
 
 ```html
+<header class="hero">
+  <p class="meta"><span class="badge">学习路径</span> 预计 8 周</p>
+  <h1>PHP 后端开发</h1>
+  <p class="hero-desc">从零到能独立完成后端 CRUD 与部署</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-num">6</span><span class="stat-label">模块</span></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">核心</span></div>
+    <div class="stat"><span class="stat-num">60h</span><span class="stat-label">预计学时</span></div>
+  </div>
+</header>
+
 <h2>学习模块</h2>
-<table>
-  <thead>
-    <tr><th>模块</th><th>学完应能做什么</th><th>预计学时</th><th></th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>M1 PHP 基础</td>
-      <td>写变量、流程控制与函数</td>
-      <td>8h</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>M2 面向对象</td>
-      <td>定义类、接口与命名空间</td>
-      <td>10h</td>
-      <td><span class="badge core">核心</span></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>模块</th><th>学完应能做什么</th><th>预计学时</th><th></th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>M1 PHP 基础</td>
+        <td>写变量、流程控制与函数</td>
+        <td>8h</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>M2 面向对象</td>
+        <td>定义类、接口与命名空间</td>
+        <td>10h</td>
+        <td><span class="badge core">核心</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <section class="module-outline" id="m2">
-  <h3>M2 面向对象 <span class="badge core">核心</span></h3>
+  <div class="module-header">
+    <span class="module-id">M2</span>
+    <h3>面向对象 <span class="badge core">核心</span></h3>
+  </div>
   <p class="outline-meta">预计 10 小时 · 前置：M1</p>
   <ul>
     <li>能定义类、属性、方法与访问修饰符</li>
@@ -107,6 +123,7 @@
 
 ```html
 <h2>推荐学习资源</h2>
+<div class="table-wrap">
 <table class="resource-table">
   <thead>
     <tr><th>类型</th><th>名称</th><th>说明</th><th>链接</th></tr>
@@ -138,6 +155,7 @@
     </tr>
   </tbody>
 </table>
+</div>
 
 <h2>建议学习顺序</h2>
 <ol class="learning-path">

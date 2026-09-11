@@ -69,7 +69,7 @@ description: 根据用户职业或技能目标生成 HTML 学习路径与带具�
 ### 输出规则
 
 - 创建 `.cursor/learning/{goal-slug}/` 及 `assets/`、`modules/`、`exams/`、`results/`
-- 写入 `index.html`：能力目标、模块总览表、**每模块 `.module-outline` 明细卡片**（含 3 条精选链接）、里程碑、下一步、免责声明
+- 写入 `index.html`：**`.hero` 统计区**、能力目标、模块总览表（`.table-wrap`）、**每模块 `.module-outline` 明细卡片**（含 `.module-header` 与 3 条精选链接）、里程碑、下一步、免责声明
 - **同时为每个模块生成** `modules/m{x}-*.html` **纲要页**：学习目标、知识点明细、**完整资源链接表**（4–8 条真实 URL）、建议学习顺序
 - 写入 `state.json`（含 `modules_generated: true`）
 - 链接规范见 [reference/learning-resources.md](reference/learning-resources.md)；不确定时用 WebSearch 核实后再写入
@@ -117,8 +117,8 @@ Rubric 格式见 [reference/rubric-examples.md](reference/rubric-examples.md)。
 
 ### 成绩 HTML 须含
 
-- 总分、结论 badge（pass / fail）
-- 模块得分表与 score-bar
+- **`.score-hero`**：大号总分、结论 badge（pass / fail）
+- 模块得分表（`.table-wrap`）与 score-bar
 - 逐题得分与解析
 - 未通过：复习清单 + 补考说明（最多 2 次补考）
 - 通过：后续进阶建议
@@ -144,7 +144,9 @@ attempt: 0
 
 ## 质量自检
 
-- [ ] 用户可见产物均为 HTML，且链到 `assets/style.css`
+- [ ] 用户可见产物均为 HTML，引用 Google Fonts + `assets/style.css`，无 inline style
+- [ ] `index.html` 含 `.hero` + `.stats`；`results/*.html` 含 `.score-hero`
+- [ ] 表格用 `.table-wrap` 包裹；模块卡片含 `.module-header` + `.module-id`
 - [ ] PLAN 已为每个模块生成纲要 HTML，且每模块 ≥4 条可点击真实学习链接
 - [ ] `index.html` 含每模块 `.module-outline` 与链到对应模块页
 - [ ] 试卷 HTML 无答案；Rubric 仅在 `-rubric.md`
