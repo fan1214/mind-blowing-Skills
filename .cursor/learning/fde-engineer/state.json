@@ -1,0 +1,13 @@
+{
+  "goal": "fde-engineer",
+  "title": "FDE 工程师（Forward Deployed Engineer）",
+  "phase": "PLAN",
+  "job_type": "mixed",
+  "modules": ["M1", "M2", "M3", "M4", "M5", "M6"],
+  "core": ["M2", "M3", "M4", "M5"],
+  "exam_mode": "full",
+  "attempt": 0,
+  "modules_generated": true,
+  "modules_studied": [],
+  "updated": "2026-09-11"
+}
