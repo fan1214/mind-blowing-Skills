@@ -81,8 +81,10 @@ mind-blowing-Skills/
 ├── README.md
 ├── LICENSE
 └── career-learning-exam/
+    ├── README.md                       # Skill 使用说明（给人看）
     ├── SKILL.md                        # Skill 主指令（Agent 读取）
     ├── examples.md                     # 完整流程示例（PHP 后端）
+    ├── demo/preview.html               # SaaS 样式预览
     ├── assets/
     │   └── style.css                   # 学习工作区共享样式
     └── reference/

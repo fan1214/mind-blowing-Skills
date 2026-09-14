@@ -5,6 +5,8 @@ description: 根据用户职业或技能目标生成 HTML 学习路径与带具�
 
 # 职业/技能学习与考试
 
+面向用户的安装与使用说明见 [README.md](README.md)。用户询问「这个 skill 怎么用 / 装在哪 / 目录结构」时，优先引用 README，执行流程仍以本文为准。
+
 ## 何时使用
 
 - 用户想系统学习某职业或技能（如 PHP 开发、前端、数据分析）
@@ -157,6 +159,7 @@ attempt: 0
 
 ## 参考
 
+- 用户说明：[README.md](README.md)
 - HTML 规范：[reference/html-guide.md](reference/html-guide.md)
 - **学习链接与模块明细**：[reference/learning-resources.md](reference/learning-resources.md)
 - 样式表：[assets/style.css](assets/style.css)
